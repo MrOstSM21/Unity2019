@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2024992286923027003}
   - component: {fileID: 2024992286923027002}
   - component: {fileID: 2024992286923026997}
-  - component: {fileID: 1507683024340386911}
+  - component: {fileID: 1374794604288677581}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -137,7 +137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 8250608324258176005, guid: caf428b7399b41149bf67f5d30f0b5d2,
     type: 3}
---- !u!114 &1507683024340386911
+--- !u!114 &1374794604288677581
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -146,6 +146,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2024992286923026998}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5444a99429c445142b97c9dd479069e9, type: 3}
+  m_Script: {fileID: 11500000, guid: 54e3c8c9683d0c74c9c17f31ed78403c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ball: {fileID: 2024992286923026997}

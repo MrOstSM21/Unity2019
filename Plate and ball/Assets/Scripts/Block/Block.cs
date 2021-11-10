@@ -17,7 +17,6 @@ public class Block : MonoBehaviour
         blockParticle = GetComponent<ParticleSystem>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         this.gameObject.GetComponent<SpriteRenderer>().sprite = spriteList[spriteList.Count - 1];
-
     }
     public void ApplyDamage()
     {
