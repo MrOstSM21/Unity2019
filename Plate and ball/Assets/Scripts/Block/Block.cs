@@ -1,11 +1,14 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Block : MonoBehaviour
 {
+   
     [SerializeField] private List<Sprite> spriteList;
     [SerializeField] private int score;
+    
 
     private int life;
     private ParticleSystem blockParticle;
@@ -36,6 +39,7 @@ public class Block : MonoBehaviour
             spriteRenderer.enabled = false;
             this.gameObject.GetComponent<BoxCollider2D>().enabled = false;
             uiScore.ChangeScore(score);
+
         }
         else
         {

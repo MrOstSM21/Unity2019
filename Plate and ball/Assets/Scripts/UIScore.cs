@@ -5,9 +5,10 @@ using UnityEngine.UI;
 
 public class UIScore : MonoBehaviour
 {
-    
+
     private int scoreValue;
     private Text score;
+    
     private void Awake()
     {
         score = GetComponent<Text>();
@@ -19,4 +20,5 @@ public class UIScore : MonoBehaviour
         scoreValue += pointsForEnemy;
         score.text = scoreValue.ToString();
     }
-}
+
+ }
