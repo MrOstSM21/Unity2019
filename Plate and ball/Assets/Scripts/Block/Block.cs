@@ -1,15 +1,19 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Block : MonoBehaviour
 {
+   
     [SerializeField] private List<Sprite> spriteList;
     [SerializeField] private int score;
+    
 
     private int life;
     private ParticleSystem blockParticle;
     private SpriteRenderer spriteRenderer;
+    
 
     private void Awake()
     {
@@ -26,6 +30,7 @@ public class Block : MonoBehaviour
             blockParticle.Play();
             spriteRenderer.enabled = false;
             this.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+           
         }
         else
         {
