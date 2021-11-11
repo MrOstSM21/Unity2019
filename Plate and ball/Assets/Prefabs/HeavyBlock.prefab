@@ -4916,3 +4916,5 @@ MonoBehaviour:
   - {fileID: 7049257232087766127, guid: 5a637a487a6a8d1438344576e3396ba8, type: 3}
   - {fileID: 3394127505472513950, guid: 5a637a487a6a8d1438344576e3396ba8, type: 3}
   score: 20
+  canvasScore: {fileID: 5931220165615467657, guid: de6515d0803acb049af11d19abd6eb8c,
+    type: 3}

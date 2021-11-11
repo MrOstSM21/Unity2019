@@ -13,7 +13,8 @@ public class Block : MonoBehaviour
     private int life;
     private ParticleSystem blockParticle;
     private SpriteRenderer spriteRenderer;
-    
+    private UIScore uiScore;
+    private GameObject canvasScore;
 
     private void Awake()
     {
@@ -22,6 +23,13 @@ public class Block : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         this.gameObject.GetComponent<SpriteRenderer>().sprite = spriteList[spriteList.Count - 1];
     }
+
+    private void Start()
+    {
+        canvasScore = GameObject.FindGameObjectWithTag("UiScore");
+        uiScore = canvasScore.GetComponent<UIScore>();
+    }
+
     public void ApplyDamage()
     {
         life -= 1;
@@ -30,7 +38,8 @@ public class Block : MonoBehaviour
             blockParticle.Play();
             spriteRenderer.enabled = false;
             this.gameObject.GetComponent<BoxCollider2D>().enabled = false;
-           
+            uiScore.ChangeScore(score);
+
         }
         else
         {

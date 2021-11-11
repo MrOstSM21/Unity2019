@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6308506571745090263}
   - component: {fileID: 6297094919251526585}
   - component: {fileID: 4202204083941269179}
-  - component: {fileID: 6942528052427927335}
+  - component: {fileID: 8167307735330525053}
   m_Layer: 0
   m_Name: Block
   m_TagString: Untagged
@@ -4890,7 +4890,7 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &6942528052427927335
+--- !u!114 &8167307735330525053
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4905,3 +4905,5 @@ MonoBehaviour:
   spriteList:
   - {fileID: 741921897803722968, guid: af2a8d27f7d2e064cb62919a19bacc11, type: 3}
   score: 10
+  canvasScore: {fileID: 5931220165615467657, guid: de6515d0803acb049af11d19abd6eb8c,
+    type: 3}
