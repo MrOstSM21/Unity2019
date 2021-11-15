@@ -6,7 +6,7 @@ public class MovePlate : MonoBehaviour, IMoveObject
 {
     [SerializeField] private float moveSpeed = 5.0f;
 
-    private float moveLimit = 1.625f;
+    private float moveLimit = 1.935f;
     private ObjectInputController inputMove;
 
 

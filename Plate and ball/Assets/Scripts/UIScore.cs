@@ -8,17 +8,16 @@ public class UIScore : MonoBehaviour
 
     private int scoreValue;
     private Text score;
-    
+
     private void Awake()
     {
         score = GetComponent<Text>();
-        scoreValue = 0;
-        score.text = scoreValue.ToString();
+        score.text = "SCORE: 0";
     }
     public void ChangeScore(int pointsForEnemy)
     {
         scoreValue += pointsForEnemy;
-        score.text = scoreValue.ToString();
+        score.text = "SCORE: " + scoreValue.ToString();
     }
 
- }
+}
