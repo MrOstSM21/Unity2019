@@ -37,7 +37,12 @@ public class MoveBall : MonoBehaviour, IMoveObject
 
     public void AddForce(float direction = 0, float differenceOfPositions = 0)
     {
-        rb.velocity = Vector2.zero;
+        StopMove();
         rb.AddForce(new Vector2(direction * Mathf.Abs(differenceOfPositions * FORCE), FORCE));
     }
+    public void StopMove()
+    {
+        rb.velocity = Vector2.zero;
+    }
+
 }
