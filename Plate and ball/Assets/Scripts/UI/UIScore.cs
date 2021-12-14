@@ -19,5 +19,10 @@ public class UIScore : MonoBehaviour
         scoreValue += pointsForEnemy;
         score.text = "SCORE: " + scoreValue.ToString();
     }
+    public void ScoreDefault()
+    {
+        scoreValue = 0;
+        score.text = "SCORE: 0";
+    }
 
 }

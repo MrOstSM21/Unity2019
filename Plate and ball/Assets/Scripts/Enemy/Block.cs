@@ -3,18 +3,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Block : MonoBehaviour
+public class Block : MonoBehaviour, IEnemyObject
 {
-   
+    public event Action ObjectDestroy;
+
     [SerializeField] private List<Sprite> spriteList;
     [SerializeField] private int score;
-    
+
 
     private int life;
     private ParticleSystem blockParticle;
     private SpriteRenderer spriteRenderer;
     private UIScore uiScore;
     private GameObject canvasScore;
+
+    
 
     private void Awake()
     {
@@ -37,13 +40,13 @@ public class Block : MonoBehaviour
         {
             blockParticle.Play();
             spriteRenderer.enabled = false;
-            this.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            gameObject.GetComponent<BoxCollider2D>().enabled = false;
             uiScore.ChangeScore(score);
-
+            ObjectDestroy?.Invoke();
         }
         else
         {
-            this.gameObject.GetComponent<SpriteRenderer>().sprite = spriteList[life - 1];
+            gameObject.GetComponent<SpriteRenderer>().sprite = spriteList[life - 1];
         }
     }
 }

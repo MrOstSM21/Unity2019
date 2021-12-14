@@ -37,14 +37,14 @@ public class BallCollision : MonoBehaviour
         if (collision.gameObject.TryGetComponent(out SceneLoader sceneLoader))
         {
             Destroy(this.gameObject);
-            sceneLoader.NextScene();
+            sceneLoader.EndGame();
         }
     }
     private void DestroyObject(Collision2D collision)
     {
-        if (collision.gameObject.TryGetComponent(out Block block))
+        if (collision.gameObject.TryGetComponent(out IEnemyObject enemy))
         {
-            block.ApplyDamage();
+            enemy.ApplyDamage();
         }
     }
 }

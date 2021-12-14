@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 53980101699816512}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.7, z: 1}
+  m_LocalScale: {x: 0.31649572, y: 0.39979753, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -4916,5 +4916,3 @@ MonoBehaviour:
   - {fileID: 7049257232087766127, guid: 5a637a487a6a8d1438344576e3396ba8, type: 3}
   - {fileID: 3394127505472513950, guid: 5a637a487a6a8d1438344576e3396ba8, type: 3}
   score: 20
-  canvasScore: {fileID: 5931220165615467657, guid: de6515d0803acb049af11d19abd6eb8c,
-    type: 3}
