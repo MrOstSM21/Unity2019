@@ -35,14 +35,22 @@ public class LevelCreater : MonoBehaviour
     {
         canvasChangeLevel = GameObject.FindGameObjectWithTag("UIChangeLevel");
         change = canvasChangeLevel.GetComponent<UIChangeLevel>();
-
     }
     public void NextLevel()
     {
-        pause.PauseDisable();
-        stageUpdater.LevelUpdate();
-        change.ChangeCondition();
-        CreateEnemy();
+        if (level < prefabEnemy.Count)
+        {
+            pause.PauseDisable();
+            stageUpdater.LevelUpdate();
+            change.ChangeCondition();
+            CreateEnemy();
+        }
+        else
+        {
+            var finishGame = FindObjectOfType<SceneLoader>();
+            finishGame.FinishGame();
+        }
+
     }
     private void CreateEnemy()
     {

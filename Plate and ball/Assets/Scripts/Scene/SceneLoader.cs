@@ -20,5 +20,8 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.sceneCountInBuildSettings-1);
     }
-   
+   public void FinishGame()
+    {
+        SceneManager.LoadScene(2);
+    }
 }
