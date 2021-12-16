@@ -6,7 +6,12 @@ public class BallCollision : MonoBehaviour
 {
     [SerializeField] private MoveBall ball;
     private float lastPositionBall;
+    private SoundPlayer soundPlayer;
 
+    private void Start()
+    {
+        soundPlayer = FindObjectOfType<SoundPlayer>();
+    }
     public void OnCollisionEnter2D(Collision2D collision)
     {
         HorizontalOffsetBall(collision);
@@ -14,6 +19,8 @@ public class BallCollision : MonoBehaviour
         EndGame(collision);
 
         DestroyObject(collision);
+
+        PlaySound(collision);
     }
     private void HorizontalOffsetBall(Collision2D collision) //Removes endless vertical movement.
     {
@@ -45,6 +52,18 @@ public class BallCollision : MonoBehaviour
         if (collision.gameObject.TryGetComponent(out IEnemyObject enemy))
         {
             enemy.ApplyDamage();
+            soundPlayer.PlayImpactSound(enemy.GetAudioSource());
         }
+    }
+    private void PlaySound(Collision2D collision)
+    {
+      
+        if (!collision.gameObject.TryGetComponent(out IEnemyObject enemy) && !collision.gameObject.TryGetComponent(out SceneLoader sceneLoader))
+        {
+            soundPlayer.PlayImpactSound(ball.GetComponent<AudioSource>());
+        }
+       
+        
+       
     }
 }

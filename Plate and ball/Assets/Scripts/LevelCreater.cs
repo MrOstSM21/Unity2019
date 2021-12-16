@@ -50,7 +50,6 @@ public class LevelCreater : MonoBehaviour
             var finishGame = FindObjectOfType<SceneLoader>();
             finishGame.FinishGame();
         }
-
     }
     private void CreateEnemy()
     {

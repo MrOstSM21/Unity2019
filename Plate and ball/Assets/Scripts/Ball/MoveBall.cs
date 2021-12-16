@@ -11,9 +11,11 @@ public class MoveBall : MonoBehaviour, IMoveObject
     private Rigidbody2D rb;
     private bool isActive;
     private ObjectInputController inputStartMove;
+    private AudioSource sound;
 
     void Start()
     {
+        sound = GetComponent<AudioSource>();
         inputStartMove = new ObjectInputController();
         rb = GetComponent<Rigidbody2D>();
         rb.bodyType = RigidbodyType2D.Kinematic;
@@ -44,5 +46,6 @@ public class MoveBall : MonoBehaviour, IMoveObject
     {
         rb.velocity = Vector2.zero;
     }
+   
 
 }

@@ -16,11 +16,11 @@ public class Block : MonoBehaviour, IEnemyObject
     private SpriteRenderer spriteRenderer;
     private UIScore uiScore;
     private GameObject canvasScore;
-
-    
+    private AudioSource audioSource;
 
     private void Awake()
     {
+        audioSource = GetComponent<AudioSource>();
         life = spriteList.Count;
         blockParticle = GetComponent<ParticleSystem>();
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -48,5 +48,10 @@ public class Block : MonoBehaviour, IEnemyObject
         {
             gameObject.GetComponent<SpriteRenderer>().sprite = spriteList[life - 1];
         }
+    }
+
+    public AudioSource GetAudioSource()
+    {
+        return audioSource;
     }
 }
