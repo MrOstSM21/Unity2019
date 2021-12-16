@@ -7,4 +7,5 @@ public interface IEnemyObject
 {
     event Action ObjectDestroy;
     void ApplyDamage();
+    AudioSource GetAudioSource();
 }
