@@ -1,11 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PauseMode
 {
-   
-
     public void PauseEnable()
     {
         Time.timeScale = 0f;

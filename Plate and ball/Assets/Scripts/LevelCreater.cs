@@ -1,7 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
 
 public class LevelCreater : MonoBehaviour
 {
@@ -21,6 +20,7 @@ public class LevelCreater : MonoBehaviour
     {
         stageUpdater = GetComponent<StageUpdater>();
         pause = new PauseMode();
+        pause.PauseDisable();
     }
 
     private void Start()
@@ -29,6 +29,7 @@ public class LevelCreater : MonoBehaviour
         GetUIChangeLevel();
         change.ChangeCondition();
         CreateEnemy();
+        Score.UpdateStartScore();
     }
 
     private void GetUIChangeLevel()
@@ -36,14 +37,19 @@ public class LevelCreater : MonoBehaviour
         canvasChangeLevel = GameObject.FindGameObjectWithTag("UIChangeLevel");
         change = canvasChangeLevel.GetComponent<UIChangeLevel>();
     }
+
     public void NextLevel()
     {
         if (level < prefabEnemy.Count)
         {
             pause.PauseDisable();
+
             stageUpdater.LevelUpdate();
+
             change.ChangeCondition();
+
             CreateEnemy();
+
         }
         else
         {
@@ -97,10 +103,7 @@ public class LevelCreater : MonoBehaviour
             enemy.ObjectDestroy += Enemy_ObjectDestroy;
         }
     }
-    private void InvokePauseEnable()
-    {
-        pause.PauseEnable();
-    }
+
     private void Enemy_ObjectDestroy()
     {
         countEnemy--;
@@ -109,10 +112,8 @@ public class LevelCreater : MonoBehaviour
         {
             var ball = FindObjectOfType<MoveBall>();
             ball.StopMove();
-            Invoke("InvokePauseEnable", 1.5f);
+            pause.PauseEnable();
             change.ChangeCondition();
         }
     }
-
-
 }

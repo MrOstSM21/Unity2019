@@ -1,14 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MovePlate : MonoBehaviour, IMoveObject
 {
     [SerializeField] private float moveSpeed = 5.0f;
 
-    private float moveLimit = 1.935f;
+    private float moveLimit = 1.69f;
     private ObjectInputController inputMove;
-
 
     void Update()
     {
@@ -16,9 +13,9 @@ public class MovePlate : MonoBehaviour, IMoveObject
     }
     public void Move()
     {
-        inputMove = new ObjectInputController();
+        inputMove =FindObjectOfType<ObjectInputController>().GetComponent<ObjectInputController>();
         transform.localPosition = new Vector2(Mathf.Clamp(transform.position.x, -moveLimit, moveLimit), transform.position.y);
-        transform.Translate(Vector2.right * inputMove.HorizontalDisplacementInput() * moveSpeed * Time.deltaTime);
+        transform.Translate(Vector2.right * inputMove.HorizontalInput() * moveSpeed * Time.deltaTime);
     }
 
 }

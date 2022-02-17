@@ -27,10 +27,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8250608324258176003}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -4, z: 0}
-  m_LocalScale: {x: 0.611236, y: 0.4037109, z: 1}
+  m_LocalPosition: {x: 0, y: -4.15, z: 0}
+  m_LocalScale: {x: 0.52719104, y: 0.35766265, z: 1}
   m_Children:
-  - {fileID: 8250608324333890815}
+  - {fileID: 7857548495162003613}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -73,7 +73,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 741921897803722968, guid: af2a8d27f7d2e064cb62919a19bacc11, type: 3}
+  m_Sprite: {fileID: -6721728136321296765, guid: 57daab23117ac584eb0e52b1ea7615f3,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,18 +98,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0042920113, y: -0.0000005364418}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.78, y: 0.64}
+    oldSize: {x: 2.99, y: 1.1}
     newSize: {x: 1.78, y: 0.64}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.78, y: 0.64}
+  m_Size: {x: 2.990367, y: 1.0955061}
   m_EdgeRadius: 0
 --- !u!114 &8250608324258176004
 MonoBehaviour:
@@ -123,7 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
---- !u!1001 &7969747702118260427
+--- !u!1001 &8147479534379901609
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -138,12 +139,12 @@ PrefabInstance:
     - target: {fileID: 2024992286923026996, guid: dcbd7f7b56f944240a8d7f601a719f0c,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.6597483
+      value: 0.6153225
       objectReference: {fileID: 0}
     - target: {fileID: 2024992286923026996, guid: dcbd7f7b56f944240a8d7f601a719f0c,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.0104038
+      value: 0.981426
       objectReference: {fileID: 0}
     - target: {fileID: 2024992286923026996, guid: dcbd7f7b56f944240a8d7f601a719f0c,
         type: 3}
@@ -153,7 +154,7 @@ PrefabInstance:
     - target: {fileID: 2024992286923026996, guid: dcbd7f7b56f944240a8d7f601a719f0c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.7678761
+      value: 1.21
       objectReference: {fileID: 0}
     - target: {fileID: 2024992286923026996, guid: dcbd7f7b56f944240a8d7f601a719f0c,
         type: 3}
@@ -168,17 +169,17 @@ PrefabInstance:
     - target: {fileID: 2024992286923026996, guid: dcbd7f7b56f944240a8d7f601a719f0c,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2024992286923026996, guid: dcbd7f7b56f944240a8d7f601a719f0c,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2024992286923026996, guid: dcbd7f7b56f944240a8d7f601a719f0c,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2024992286923026996, guid: dcbd7f7b56f944240a8d7f601a719f0c,
         type: 3}
@@ -205,16 +206,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ball
       objectReference: {fileID: 0}
-    - target: {fileID: 2024992286923027002, guid: dcbd7f7b56f944240a8d7f601a719f0c,
+    - target: {fileID: 2024992286923026999, guid: dcbd7f7b56f944240a8d7f601a719f0c,
         type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 4018074224661003100, guid: 57daab23117ac584eb0e52b1ea7615f3,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dcbd7f7b56f944240a8d7f601a719f0c, type: 3}
---- !u!4 &8250608324333890815 stripped
+--- !u!4 &7857548495162003613 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2024992286923026996, guid: dcbd7f7b56f944240a8d7f601a719f0c,
     type: 3}
-  m_PrefabInstance: {fileID: 7969747702118260427}
+  m_PrefabInstance: {fileID: 8147479534379901609}
   m_PrefabAsset: {fileID: 0}

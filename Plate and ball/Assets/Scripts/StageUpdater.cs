@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class StageUpdater : MonoBehaviour
 {
@@ -32,5 +30,4 @@ public class StageUpdater : MonoBehaviour
         Destroy(ball.gameObject);
         Destroy(plate.gameObject);
     }
-
 }
