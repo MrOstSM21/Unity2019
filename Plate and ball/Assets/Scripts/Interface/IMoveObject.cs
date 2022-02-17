@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IMoveObject 
+public interface IMoveObject
 {
-     void Move();
-    
+    void Move();
 }

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -42,6 +41,7 @@ public class Block : MonoBehaviour, IEnemyObject
             spriteRenderer.enabled = false;
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
             uiScore.ChangeScore(score);
+            Score.SetScore(score);
             ObjectDestroy?.Invoke();
         }
         else

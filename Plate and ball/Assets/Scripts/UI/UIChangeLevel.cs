@@ -1,21 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 
 public class UIChangeLevel : MonoBehaviour
 {
-
     private GameObject changeLevel;
-    
-
 
     private void Awake()
     {
         changeLevel = this.gameObject;
         changeLevel.SetActive(true);
     }
-     
+
     public void ChangeCondition()
     {
         var condition = changeLevel.activeSelf;
@@ -27,7 +21,6 @@ public class UIChangeLevel : MonoBehaviour
         {
             changeLevel.SetActive(true);
         }
-        
     }
-    
+
 }

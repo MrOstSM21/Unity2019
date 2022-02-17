@@ -1,14 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-
-    public void NextScene()
+    public void LevelScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Score.UploadBestScoreInStart(); //TODO: Move to another class.
+        SceneManager.LoadScene(1);
     }
 
     public void MainMenu()
@@ -18,10 +16,14 @@ public class SceneLoader : MonoBehaviour
 
     public void EndGame()
     {
-        SceneManager.LoadScene(SceneManager.sceneCountInBuildSettings-1);
+        SceneManager.LoadScene(SceneManager.sceneCountInBuildSettings - 1);
     }
-   public void FinishGame()
+    public void FinishGame()
     {
         SceneManager.LoadScene(2);
+    }
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }

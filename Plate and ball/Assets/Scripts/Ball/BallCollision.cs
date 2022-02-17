@@ -1,10 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class BallCollision : MonoBehaviour
 {
     [SerializeField] private MoveBall ball;
+
     private float lastPositionBall;
     private SoundPlayer soundPlayer;
 
@@ -44,6 +43,7 @@ public class BallCollision : MonoBehaviour
         if (collision.gameObject.TryGetComponent(out SceneLoader sceneLoader))
         {
             Destroy(this.gameObject);
+            Score.SaveBestScore();
             sceneLoader.EndGame();
         }
     }

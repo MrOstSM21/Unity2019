@@ -1,25 +1,34 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class ObjectInputController
+public class ObjectInputController : MonoBehaviour
 {
-    private float moveHorizontal= Input.GetAxis("Horizontal");
     private bool startBallMovement;
+    private float horizontalOffset;
 
-    public float HorizontalDisplacementInput()
+    public void SetHorizontal(float value)
     {
-        return moveHorizontal;
+        horizontalOffset = value;
+    }
+
+    public float HorizontalInput()
+    {
+        return horizontalOffset;
     }
 
     public bool StartBallMovement()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            startBallMovement = true;
-        }
         return startBallMovement;
-        
+    }
+
+    private void OnMouseDown()
+    {
+        startBallMovement = true;
+    }
+
+    private void OnMouseUp()
+    {
+        startBallMovement = false;
     }
 
 }
+

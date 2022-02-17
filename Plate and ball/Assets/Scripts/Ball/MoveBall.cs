@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MoveBall : MonoBehaviour, IMoveObject
 {
@@ -16,7 +14,7 @@ public class MoveBall : MonoBehaviour, IMoveObject
     void Start()
     {
         sound = GetComponent<AudioSource>();
-        inputStartMove = new ObjectInputController();
+        inputStartMove = FindObjectOfType<ObjectInputController>().GetComponent<ObjectInputController>();
         rb = GetComponent<Rigidbody2D>();
         rb.bodyType = RigidbodyType2D.Kinematic;
         transform.SetParent(parentObject);
@@ -46,6 +44,4 @@ public class MoveBall : MonoBehaviour, IMoveObject
     {
         rb.velocity = Vector2.zero;
     }
-   
-
 }
